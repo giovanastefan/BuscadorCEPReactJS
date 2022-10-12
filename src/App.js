@@ -46,7 +46,8 @@ function App() {
         <h2>CEP: {cep.cep}</h2>
         <span>DDD: {cep.ddd}</span>
         <span>{cep.logradouro}</span>
-        <span>{cep.bairro} - {cep.localidade}, {cep.uf}</span>
+        <span>{cep.bairro}</span>
+        <span>{cep.localidade}, {cep.uf}</span>
       </div>
       <button onClick={handleLimpar} className="botaoLimpar"> Limpar </button>
       </div>
