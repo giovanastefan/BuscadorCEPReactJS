@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #154360;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+    font-size: 32px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.containerInput {
+    padding: 8px;
+    margin: 34px 0px;
+    display: flex;
+    border-radius: 8px;
+    background-color: #1F618D;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.containerInput input {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    margin-right: 18px;
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.containerInput input::placeholder {
+    color: #D7DBDD;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.botaoBuscar {
+    background: transparent;
+    border: 0;
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.botaoBuscar:hover {
+    transform: scale(1.2);
+}
+
+.botaoLimpar {
+    background-color: #1F618D;
+    border-radius: 8px;
+    border-color: #022841;
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.botaoLimpar:hover {
+    background-color: #022841;
+}
+
+.resultado {
+    width: 40%;
+}
+
+.containerBusca {
+    background-color: #1F618D;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.containerBusca h2 {
+    margin: 6px;
+    font-size: 20px;
 }
