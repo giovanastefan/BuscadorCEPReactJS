@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import api from "./services/api";
-import './app.css';
+import './App.css';
 
 function App() {
   const [input, setInput] = useState('');
@@ -13,7 +13,7 @@ function App() {
   }
 
   async function handleSearch() {
-    if(input !== "") {
+    if(input !== "".trim()) {
       try {
         const response = await api.get(`${input}/json`);
         setCep(response.data);
@@ -40,10 +40,11 @@ function App() {
         <button onClick={handleSearch} className="botaoBuscar">
         <FiSearch size={25} color="black"/></button>
       </div>
-      {Object.keys(cep).length > 0 &&
+      {Object.keys(cep).length > 0 && !cep.erro &&
       <div className="resultado">
       <div className="containerBusca">
         <h2>CEP: {cep.cep}</h2>
+        <span>DDD: {cep.ddd}</span>
         <span>{cep.logradouro}</span>
         <span>{cep.bairro} - {cep.localidade}, {cep.uf}</span>
       </div>
